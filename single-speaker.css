@@ -1,0 +1,185 @@
+.speaker-banner {
+  background-image: url("imgs/banner-shawn.png");
+  aspect-ratio: 1440/625;
+  background-size: contain;
+  background-position: center;
+}
+
+.speaker-banner p {
+  font-size: 1.1rem;
+  color: #333; /* Un gris oscuro para el texto introductorio */
+  line-height: 1.6;
+}
+.bg-speaker{
+    background-image: url("imgs/bg-speakers-yellow.png");
+    aspect-ratio: 995/331;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 95%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/* Estilos para el acordeón (ejemplo, puedes personalizarlos más) */
+.speaker-details-section .accordion-item {
+  background-color: #232739; /* Un poco más claro que el fondo de la sección */
+  border: 1px solid #3a3f58;
+  margin-bottom: 10px;
+  border-radius: .25rem;
+}
+
+.speaker-details-section .accordion-button {
+  background-color: #232739;
+  color: var(--color-titanium);
+  font-weight: var(--fw-medium);
+  border-radius: .25rem;
+}
+
+.speaker-details-section .accordion-button:not(.collapsed) {
+  color: var(--color-gold);
+  background-color: #1a1d2b; /* Un poco más oscuro cuando está activo */
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.125);
+}
+
+.speaker-details-section .accordion-button:focus {
+  box-shadow: 0 0 0 .25rem rgba(202, 215, 82, 0.25); /* Sombra con color lime al enfocar */
+  border-color: var(--color-lime);
+}
+
+.speaker-details-section .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cad752'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.speaker-details-section .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d8d737'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+
+.speaker-details-section .accordion-body {
+  color: var(--color-titanium);
+  padding: 1.25rem;
+  background-color: #1a1d2b;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+/* Media Queries */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Estilos para pantallas extra grandes aquí */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1199.98px) {
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+  .speaker-banner .row > div {
+    text-align: center; /* Centrar contenido del banner en tablets */
+  }
+  .speaker-banner img {
+    margin-bottom: 20px;
+  }
+
+  .speaker-tabs .nav-item .nav-link {
+    font-size: 0.9rem; /* Reducir tamaño de fuente de pestañas */
+    padding: 0.5rem 0.8rem;
+  }
+  .speaker-main-title {
+    font-size: 2.5rem; /* Ajustar título principal dentro de las pestañas */
+  }
+}
+.nav-tabs{
+  border-bottom: none!important;
+  color: var(--color-titanium)!important;
+  justify-content: space-between!important;
+}
+.nav-tabs .nav-link.active{
+  color: var(--color-gold)!important;
+}
+.nav-tabs .nav-link:hover{
+  color: var(--color-gold)!important;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+  .speaker-banner {
+    background-image: url("imgs/banner-shawn-mobile.png")!important;
+    aspect-ratio: 375/515!important;
+    display: flex; 
+  }
+  .speaker-details-section .row > div[class*="col-lg-"] {
+    text-align: center; /* Centrar contenido de la primera pestaña */
+  }
+  .conocemas-links {
+    justify-content: center; /* Centrar enlaces de 'Conoce más' */
+    margin-top: 15px;
+  }
+  .speaker-main-title {
+    font-size: 2rem; /* Ajustar título principal dentro de las pestañas */
+    text-align: center;
+  }
+  #sobre-pane .col-lg-7 p {
+    text-align: justify; /* Justificar texto para mejor lectura */
+  }
+  .speaker-tabs {
+    flex-direction: column; /* Pestañas en vertical */
+  }
+  .speaker-tabs .nav-item .nav-link {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--color-gold) !important; /* Borde visible para todas */
+    margin-bottom: 5px;
+  }
+  .speaker-tabs .nav-item .nav-link.active {
+     background-color: var(--color-gold);
+     color: var(--color-bg-dark);
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  .speaker-main-title {
+    font-size: 1.8rem; /* Ajustar título principal dentro de las pestañas */
+  }
+  .tema-conferencia h5 {
+    font-size: 1rem; /* Ajustar tamaño de temas de conferencia */
+  }
+  .speaker-details-section .accordion-button {
+    font-size: 0.9rem; /* Ajustar tamaño de fuente botones acordeón */
+    padding: 0.8rem 1rem;
+  }
+
+}
+.dynamic-title {
+  /* Desktop Grande (por defecto, > 1199.98px) */
+  font-size: 4.84375rem; /* 77.5px */
+}
+
+@media (max-width: 1199.98px) {
+  /* Desktop Normal (992px - 1199.98px) */
+  .dynamic-title {
+    font-size: 3.4375rem; /* Ejemplo: 55px */
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Tablet (768px - 991.98px) */
+  .dynamic-title {
+    font-size: 2.5rem; /* Ejemplo: 40px */
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Móvil (< 767.98px) */
+  .dynamic-title {
+    font-size: 1.625rem; /* 26px */
+  }
+}

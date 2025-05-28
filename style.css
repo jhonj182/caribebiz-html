@@ -4,7 +4,10 @@ body {
   font-family: 'Futura', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw!important;
+  overflow-x: hidden;
 }
+
 :root {
   /* Colors */
   --color-bg-dark: #0D0F1B;
@@ -49,11 +52,12 @@ body {
   color: #fff;
   padding-top: 25px;
   padding-bottom: 132px;
+  position: relative
 }
 
 .btn-register {
   border-radius: 20px;
-  background-color: var(--color-lime);
+  background-color: var(--color-gold);
   color: var(--color-bg-dark);
   padding: 8px 25px;
   max-width: 360px;
@@ -128,9 +132,7 @@ body {
   height: 100%;
   float: top;
 }
-.hero-tree-titles, .hero-four, .hero-five{
-  padding: 83px 0;
-}
+
 .hero-tree-titles .my-title-sm{
   padding-bottom: 35px;
 }
@@ -151,7 +153,8 @@ body {
   background-image: url('imgs/banner-caribebiz-2.webp');
   background-repeat: no-repeat;
   background-size: cover;
-
+  padding-top: 69px;
+  padding-bottom: 75px;
   display: flex;
   align-items: center;
 }
@@ -264,56 +267,151 @@ body {
 .my-number-subtext     { font-size: 24px; font-family: var(--font-family-text); letter-spacing: 0.72px; }
 .my-title-xl           { font-size: 77.53px; letter-spacing: -2%; }
 .my-speaker-name       { font-size: 30px; color: #000}
-.my-speaker-desc       { font-size: 15px; letter-spacing: -1%; color: #000}
+.my-speaker-desc       { font-size: 15px; letter-spacing: -1%; color: #000; font-family: var(--font-family-text);}
 .my-speaker-button     { font-size: 14px; letter-spacing: 0; color: #000}
-.my-sponsors-title     { font-size: 32.9px; letter-spacing: 0; color: #fff; margin-left: 50px }
-.my-title-recap        { font-size: 40px; margin-bottom: 34px;letter-spacing: 0; color: var(--color-bg-dark); margin-left: 50px }
+.my-sponsors-title     { font-size: 32.9px; letter-spacing: 0; color: #fff;  margin-bottom: 80px }
+.my-title-recap        { font-size: 40px; margin-bottom: 34px;letter-spacing: 0; color: var(--color-bg-dark)}
 /* Responsive: ≤1200px */
+.image-mobile{
+  display: none;
+}
+.image-desktop{
+  display: block;
+  margin-bottom: 78px;
+}
+@media (max-width: 768px) {
+  .image-desktop{
+    display: none;
+  }
+  .image-mobile{
+    display: block;
+  }
+}
+.hero-five {
+  padding-top: 106px;
+  padding-bottom: 106px;
+}
+.hero-tree-titles{
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
 @media (max-width: 1200px) {
-  .my-title-lg         { font-size: 52px; }
-  .my-title-md         { font-size: 48px; }
-  .my-title-sm         { font-size: 42px; }
-  .my-title-xl         { font-size: 60px; }
-  .my-number-xl        { font-size: 72px; }
-  .my-number-lg        { font-size: 52px; }
+  .my-title-lg         { font-size: 52px; line-height:56px;}
+  .my-title-md         { font-size: 48px; line-height:46px; }
+  .my-title-sm         { font-size: 42px; line-height:40px; }
+  .my-title-xl         { font-size: 60px; line-height:66px; }
+  .my-number-xl        { font-size: 72px; line-height:76px; }
+  .my-number-lg        { font-size: 52px; line-height:56px; }
+  .hero{
+    padding-bottom: 80px;
+  }
 }
 
 /* Responsive: ≤992px (Bootstrap md) */
 @media (max-width: 992px) {
-  .my-title-lg         { font-size: 42px; }
-  .my-title-md         { font-size: 36px; }
-  .my-title-sm         { font-size: 30px; }
-  .my-title-xl         { font-size: 50px; }
-  .my-number-xl        { font-size: 56px; }
-  .my-number-lg        { font-size: 40px; }
+  .my-title-lg         { font-size: 42px; line-height:46px; }
+  .my-title-md         { font-size: 36px; line-height:36px; }
+  .my-title-sm         { font-size: 30px; line-height:30px; }
+  .my-title-xl         { font-size: 50px; line-height:56px; }
+  .my-number-xl        { font-size: 56px; line-height:56px; }
+  .my-number-lg        { font-size: 40px; line-height:40px; }
   .my-subtitle         { font-size: 16px; }
   .my-number-subtext   { font-size: 18px; }
 }
 
 /* Responsive: ≤768px (Bootstrap sm) */
 @media (max-width: 768px) {
-  .my-title-lg         { font-size: 36px; }
-  .my-title-md         { font-size: 30px; }
-  .my-title-sm         { font-size: 24px; }
-  .my-title-xl         { font-size: 40px; }
-  .my-number-xl        { font-size: 44px; }
-  .my-number-lg        { font-size: 32px; }
-  .my-number-subtext   { font-size: 16px; }
+  .my-title-lg         { font-size: 36px; line-height:36px; }
+  .my-title-md         { font-size: 30px; line-height:30px; }
+  .my-title-sm         { font-size: 24px; line-height:24px; }
+  .my-title-xl         { font-size: 40px; line-height:40px; }
+  .my-number-xl        { font-size: 44px; line-height:44px; }
+  .my-number-lg        { font-size: 32px; line-height:32px; }
+  .my-number-subtext   { font-size: 24px; }
   .my-speaker-name     { font-size: 20px; }
   .my-speaker-desc     { font-size: 14px; }
+  .offset-lg-numbers{
+    margin: 0
+  }
 }
 
 /* Responsive: ≤576px (Bootstrap xs) */
 @media (max-width: 576px) {
-  .my-title-lg         { font-size: 30px; }
-  .my-title-md         { font-size: 24px; }
-  .my-title-sm         { font-size: 20px; }
-  .my-title-xl         { font-size: 32px; }
-  .my-number-xl        { font-size: 36px; }
-  .my-number-lg        { font-size: 28px; }
+  .my-title-lg         { font-size: 36px; line-height:40px; }
+  .my-title-md         { font-size: 24px; line-height:24px; }
+  .my-title-sm         { font-size: 36px; line-height:40px; }
+  .my-title-xl         { font-size: 32px; line-height:32px; }
+  .my-number-xl        { font-size: 65px; line-height:65px; }
+  .my-number-lg        { font-size: 66px; line-height:66px; }
   .my-subtitle         { font-size: 14px; }
-  .my-speaker-name     { font-size: 18px; }
-  .my-speaker-desc     { font-size: 13px; }
+  .my-speaker-name     { font-size: 30px; }
+  .my-speaker-desc     { font-size: 15px; }
+  .my-post-button-title{ font-size: 14px; }
+  .my-title-recap      { font-size: 26px; }
+  .my-title-xl{
+    font-size: 26px;
+  }
+  .image-mobile, h3{
+    margin-bottom: 41px;
+    margin-bottom: 0!important;
+  }
+  .title-conferencistas{
+    margin-bottom: 74px;
+  }
+  .hero-five{
+    padding-top: 74px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .pb-93{
+    padding-bottom: 41px;
+  }
+  .my-sponsors-title{
+    text-align: center!important;
+    margin-bottom: 57px;
+  }
+  .hero-four{
+    min-height: 600px;
+    background-position: center;
+    padding-top: 268px;
+    padding-bottom: 100px;
+  }
+  .my-speaker-button{
+    min-width: 50%;
+    text-align: center;
+  }
+  .card-speaker{
+    padding-left: 20px;
+    margin-bottom: 40px;
+    padding: 0
+  }
+  .info-speaker{
+ margin-bottom: 31px;
+  }
+  .hero{
+    padding-bottom: 115px;
+  }
+  .w-40{
+    width: 100%;
+  }
+  .w-60{
+    width: 100%;
+  }
+  .card-speaker{
+    flex-direction: column;
+  }
+  .hero-tree .container{
+    padding: 0!important;
+  }
+  .hero-tree{
+    padding: 83px 20px;
+  }
+  .img-fluid{
+    margin: 0!important;
+  }
+  .video-section{
+    padding: 80px 0
+  }
 }
 
 /* Footer Styles */
@@ -386,7 +484,7 @@ footer {
 }
 
 .copyright-text {
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-family-text), sans-serif;
   font-weight: var(--fw-medium); /* 500 */
   font-size: 12px;
   line-height: 20px;
@@ -394,6 +492,7 @@ footer {
   text-align: left;
   margin-top: 20px;
   color: var(--color-bg-dark);
+  opacity: 0.5;
 }
 
 /* Ensure social icons are dark if they are SVGs and need color override */
@@ -403,6 +502,12 @@ footer {
 
 /* Responsive adjustments if needed */
 @media (max-width: 768px) {
+  .hide-mobile{
+    display: none;
+  }
+  .logo{
+    text-align: center;
+  }
   .footer-left,
   .footer-right {
     text-align: center; /* Center content on smaller screens */
@@ -475,4 +580,64 @@ footer {
   width: 28px;
   height: 28px;
   margin-right: 8px
+}
+/* .btn-fixed{
+  position: fixed;
+  top: 35px;
+  right: 20px;
+  z-index: 1000;
+} */
+
+/* Single Speaker Page Styles */
+.speaker-details-section {
+  background-color: var(--color-bg-dark); /* Ya tienes esta variable */
+  color: #fff; /* Texto claro por defecto */
+  min-height: 100vh; /* Para que ocupe al menos toda la pantalla */
+}
+
+.speaker-tabs .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 30px; /* Espacio entre pestañas */
+  font-weight: var(--fw-medium); /* O el peso que corresponda */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Ajusta según diseño */
+}
+
+.speaker-tabs .nav-item .nav-link.active,
+.speaker-tabs .nav-item .nav-link:hover {
+  color: var(--color-gold); /* Usando tu variable gold, o define una específica */
+  background-color: transparent;
+  border-bottom-color: var(--color-gold);
+}
+
+.speaker-main-title {
+  /* Ajusta el tamaño y peso si es necesario, display-4 y fw-bold ya son de Bootstrap */
+  line-height: 1.1;
+  color: #fff; /* Asegurar color blanco para el título principal */
+}
+
+.tab-content {
+  padding-top: 30px; /* Espacio entre las pestañas y el contenido */
+}
+
+.conocemas-links span {
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.conocemas-links img {
+  filter: invert(90%) sepia(20%) saturate(5000%) hue-rotate(350deg) brightness(100%) contrast(100%); /* Aproximación al color oro/amarillo para SVGs si son negros por defecto */
+  /* Si tus SVGs ya son amarillos, esta línea no es necesaria o puedes usar otra técnica */
+}
+
+/* Estilos para párrafos dentro de la pestaña 'sobre' */
+#sobre-pane p {
+  font-size: var(--fs-paragraph); /* Usando tu variable de tamaño de párrafo */
+  line-height: 1.6;
+  color: var(--color-titanium); /* Un color un poco más suave que el blanco puro */
+  margin-bottom: 1.5rem;
 }

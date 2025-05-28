@@ -9,7 +9,7 @@ body {
   /* Colors */
   --color-bg-dark: #0D0F1B;
   --color-lime: #CAD752;
-  --color-gold: #D4AF37;
+  --color-gold: #D8D737;
   --color-titanium: #D5DAED;
   --bs-body-color: #0D0F1B!important;
 
@@ -44,7 +44,7 @@ body {
   color: var(--color-lime);
 }
 .hero {
-  background: url('imgs/banner-caribebiz-hero.webp') center top / cover no-repeat;
+  background: url('imgs/banner-caribebiz-hero.webp') center center / cover no-repeat;
   background-color: #000;
   color: #fff;
   padding-top: 25px;
@@ -94,6 +94,7 @@ body {
 
 .video-section {
   background-color: #D8D737;
+  padding: 100px 0;
 }
 
 .video-section iframe {
@@ -158,13 +159,14 @@ body {
   margin-top: 200px;
 }
 .hero-five{
-  background-color: var(--color-lime);
+  background-color: var(--color-gold);
 }
 .title-conferencistas{
   aspect-ratio: 1240/413;
   background-image: url('imgs/bg-title-conferencistas.webp');
-  background-size: cover;
+  background-size: contain;
   margin-bottom: 100px;
+  background-repeat: no-repeat;
 }
 .card-speaker{
   padding-left: 40px;
@@ -265,7 +267,7 @@ body {
 .my-speaker-desc       { font-size: 15px; letter-spacing: -1%; color: #000}
 .my-speaker-button     { font-size: 14px; letter-spacing: 0; color: #000}
 .my-sponsors-title     { font-size: 32.9px; letter-spacing: 0; color: #fff; margin-left: 50px }
-
+.my-title-recap        { font-size: 40px; margin-bottom: 34px;letter-spacing: 0; color: var(--color-bg-dark); margin-left: 50px }
 /* Responsive: ≤1200px */
 @media (max-width: 1200px) {
   .my-title-lg         { font-size: 52px; }
@@ -312,4 +314,165 @@ body {
   .my-subtitle         { font-size: 14px; }
   .my-speaker-name     { font-size: 18px; }
   .my-speaker-desc     { font-size: 13px; }
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--color-titanium);
+  color: var(--color-bg-dark);
+  padding: 60px 0 30px;
+  font-family: 'Futura', sans-serif;
+}
+
+.footer-logo {
+  max-width: 300px; /* Adjust as needed */
+  margin-bottom: 15px;
+}
+
+.footer-left p.siguenos {
+  font-size: 18px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-weight: bold; /* Assuming medium weight for 'Síguenos' */
+  font-family: var(--font-family-text), sans-serif;
+}
+
+.contactanos-title {
+  font-family: 'Futura', sans-serif;
+  font-weight: var(--fw-bold); /* 700 */
+  font-size: 21.99px;
+  line-height: 43.99px;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: var(--color-bg-dark);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between; /* Aligns person info and contact info */
+  margin-bottom: 20px;
+}
+
+.contact-person {
+  flex-basis: 50%; /* Adjust as needed */
+}
+
+.contact-info {
+  flex-basis: 50%; /* Adjust as needed */
+  text-align: right; /* Aligns email and phone to the right */
+}
+
+.contact-name,
+.contact-phone {
+  font-family: 'Futura', sans-serif;
+  font-weight: var(--fw-bold); /* 700 */
+  font-size: 16.23px;
+  line-height: 23.45px;
+  letter-spacing: 0%;
+  color: var(--color-bg-dark);
+  margin-bottom: 2px;
+}
+
+.contact-role,
+.contact-email {
+  font-family:  var(--font-family-text), sans-serif;
+  font-weight: var(--fw-medium); /* 500 */
+  font-size: 14.43px;
+  line-height: 23.45px;
+  letter-spacing: 0%;
+  color: var(--color-bg-dark);
+  margin-bottom: 2px;
+}
+
+.copyright-text {
+  font-family: 'Futura', sans-serif;
+  font-weight: var(--fw-medium); /* 500 */
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 3%;
+  text-align: left;
+  margin-top: 20px;
+  color: var(--color-bg-dark);
+}
+
+/* Ensure social icons are dark if they are SVGs and need color override */
+.social-icons svg path {
+  fill: var(--color-bg-dark);
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .footer-left,
+  .footer-right {
+    text-align: center; /* Center content on smaller screens */
+    margin-bottom: 30px;
+  }
+  .social-icons {
+    justify-content: center;
+    display: flex; /* Center icons */
+  }
+  .contact-details {
+    flex-direction: column; /* Stack contact details on smaller screens */
+    align-items: center;
+  }
+  .contact-info {
+    text-align: center; /* Center contact info text */
+    margin-top: 10px;
+  }
+  .footer-logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/* YouTube Playlist Styles */
+#youtube-playlist-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#youtube-playlist-container li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#youtube-playlist-container li:hover {
+  background-color: #f0f0f0; /* Un color de fondo suave al pasar el mouse */
+}
+
+#youtube-playlist-container li img {
+  width: 120px; /* Ancho de la miniatura */
+  height: 90px;  /* Alto de la miniatura */
+  margin-right: 10px;
+  border: 1px solid #ccc; /* Borde ligero para la miniatura */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+#youtube-playlist-container li span {
+  font-size: 14px;
+  flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+}
+.youtube-playlist-container{
+  height: 450px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: var(--color-titanium)!important;
+  padding : 20px;
+  border-radius: 10px;
+}
+.social-icons a{
+  display: inline-block;
+}
+.social-icon{
+  width: 28px;
+  height: 28px;
+  margin-right: 8px
 }

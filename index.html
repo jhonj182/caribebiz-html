@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-6 col-sm-12 text-end d-flex align-items-center justify-content-end">
         <a href="#" class="btn btn-register py-2  btn-fixed text-center hide-mobile">
-          <span>REGÍSTRATE COMO PATROCINADOR </span>
+          <span>QUIERO PATROCINAR</span>
           <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.3529 6.03541L1.64705 6.03541M12.3529 6.03541L7.7647 10.6236M12.3529 6.03541L7.7647 1.44717"  stroke-width="1.52941" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -287,8 +287,8 @@
       const thumbnailUrl = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
       playlistHTML += `
         <li style="display: flex; align-items: center; margin-bottom: 10px; cursor: pointer;" onclick="loadVideo('${video.id}')">
-          <img src="${thumbnailUrl}" alt="${video.title}" style="width: 120px; height: 90px; margin-right: 10px; border: 1px solid #eee;">
-          <span style="font-size: 14px;">${video.title}</span>
+          <img src="${thumbnailUrl}" alt="${video.title}" style="width: 100px; height: 75px; margin-right: 10px; border: 1px solid #eee;">
+          <span style="font-size: 14px;font-family: 'Futura Md Bt', sans-serif;">${video.title}</span>
         </li>
       `;
     });

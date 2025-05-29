@@ -4,25 +4,73 @@
   background-size: contain;
   background-position: center;
 }
+.title-conferencia{
+  font-family: var(--font-family-text);
+  font-weight: light;
+  font-size: 44px;
+}
+.speaker-main-text{
+  font-family: var(--font-family-text);
+  font-weight: light;
+  font-size: 16px;
+  line-height: 23px;
+}
 
 .speaker-banner p {
   font-size: 1.1rem;
   color: #333; /* Un gris oscuro para el texto introductorio */
   line-height: 1.6;
 }
+
+.speaker-tabs {
+  margin-bottom: 76px!important;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.speaker-tabs .nav-item .nav-link.active {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid; /* Borde visible para todas */
+  margin-bottom: 5px;
+}
+
+#sobre-pane .description{
+  border-left: 2px solid var(--color-gold);
+  padding-left: 27px;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.text-white{
+  font-family: var(--font-family-text);
+  font-size: 18px;
+}
+
+.title-section-speakers{
+  color: var(--color-bg-dark)!important;
+  font-size: 33px;
+  margin-bottom: 65px;
+}
+
 .bg-speaker{
-    background-image: url("imgs/bg-speakers-yellow.png");
-    aspect-ratio: 995/331;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: 95%;
-    height: auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  background-image: url("imgs/bg-speakers-yellow.png");
+  aspect-ratio: 995/331;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 95%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-details-section{
+  padding-top: 110px;
+}
+
 /* Estilos para el acordeón (ejemplo, puedes personalizarlos más) */
 .speaker-details-section .accordion-item {
   background-color: #232739; /* Un poco más claro que el fondo de la sección */
@@ -66,8 +114,17 @@
   border-bottom-right-radius: .25rem;
 }
 
-/* Media Queries */
+.speaker-tabs .nav-link{
+ font-family: var(--font-family-text);
+ text-transform: uppercase;
+}
 
+/* Media Queries */
+.speaker-main-title{
+  font-size:49px;
+  line-height: 58px;
+  color: var(--color-titanium);
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   /* Estilos para pantallas extra grandes aquí */
@@ -75,8 +132,7 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 1199.98px) {
-
-
+  
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -94,42 +150,71 @@
   }
   .speaker-main-title {
     font-size: 2.5rem; /* Ajustar título principal dentro de las pestañas */
+    line-height: 32px;
+    text-align: start!important;
   }
 }
+
 .nav-tabs{
   border-bottom: none!important;
   color: var(--color-titanium)!important;
   justify-content: space-between!important;
+  flex-wrap: nowrap;
 }
+
 .nav-tabs .nav-link.active{
   color: var(--color-gold)!important;
 }
+
 .nav-tabs .nav-link:hover{
   color: var(--color-gold)!important;
 }
+.hero-four{
+  padding-top: 96px
+}
+.hero-four{
+  background-image: url("imgs/save-the-date-banner.png")!important; 
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 767.98px) {
+  .card-speaker{
+    margin-bottom: 20px;
+  }
+  #sobre-pane .description {
+    margin-left: 8px!important;
+    margin-right: 8px!important;
+  }
   .speaker-banner {
     background-image: url("imgs/banner-shawn-mobile.png")!important;
     aspect-ratio: 375/515!important;
     display: flex; 
   }
+  .text-gold{
+    display: block!important;
+  }
+  .speaker-details-section{
+    padding-top: 22px;
+  }
   .speaker-details-section .row > div[class*="col-lg-"] {
     text-align: center; /* Centrar contenido de la primera pestaña */
   }
   .conocemas-links {
-    justify-content: center; /* Centrar enlaces de 'Conoce más' */
+    justify-content: start; /* Centrar enlaces de 'Conoce más' */
     margin-top: 15px;
+    margin-bottom: 15px;
   }
   .speaker-main-title {
     font-size: 2rem; /* Ajustar título principal dentro de las pestañas */
     text-align: center;
+    margin-left: 12px!important;
+    margin-right: 12px!important;
   }
   #sobre-pane .col-lg-7 p {
-    text-align: justify; /* Justificar texto para mejor lectura */
+    text-align: start; /* Justificar texto para mejor lectura */
   }
   .speaker-tabs {
     flex-direction: column; /* Pestañas en vertical */
+    margin-bottom: 76px!important;
   }
   .speaker-tabs .nav-item .nav-link {
     width: 100%;
@@ -142,10 +227,29 @@
      color: var(--color-bg-dark);
   }
 }
-
+.text-gold{
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: 64px;
+  font-family: var(--font-family-text);
+  display: none;
+}
+.tema-conferencia{
+  margin-bottom: 64px;
+  min-height: 200px;
+}
+.tema-conferencia img{
+  margin-bottom: 20px;
+}
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+.title-section-speakers{
+  margin-bottom: 45px!important;
 
+}
+.card-speaker{
+  margin-bottom: 40px;
+}
   .speaker-main-title {
     font-size: 1.8rem; /* Ajustar título principal dentro de las pestañas */
   }
@@ -156,14 +260,22 @@
     font-size: 0.9rem; /* Ajustar tamaño de fuente botones acordeón */
     padding: 0.8rem 1rem;
   }
-
 }
+
 .dynamic-title {
   /* Desktop Grande (por defecto, > 1199.98px) */
   font-size: 4.84375rem; /* 77.5px */
 }
 
 @media (max-width: 1199.98px) {
+  .speaker-main-title{
+    font-size: 2rem;
+    line-height: 42px;
+  }
+  #sobre-pane p{
+    font-size: 16px;
+    line-height: 1;
+  }
   /* Desktop Normal (992px - 1199.98px) */
   .dynamic-title {
     font-size: 3.4375rem; /* Ejemplo: 55px */

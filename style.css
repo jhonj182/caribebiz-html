@@ -629,10 +629,6 @@ footer {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.conocemas-links img {
-  filter: invert(90%) sepia(20%) saturate(5000%) hue-rotate(350deg) brightness(100%) contrast(100%); /* Aproximación al color oro/amarillo para SVGs si son negros por defecto */
-  /* Si tus SVGs ya son amarillos, esta línea no es necesaria o puedes usar otra técnica */
-}
 
 /* Estilos para párrafos dentro de la pestaña 'sobre' */
 #sobre-pane p {
